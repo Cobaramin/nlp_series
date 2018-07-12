@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  word2vec:
+    build: word2vec/.
+    command: jupyter notebook --ip=0.0.0.0 --port=8080 --allow-root
+    volumes:
+      - ./word2vec/workspace:/workspace
+    ports:
+      - 8010:8080
